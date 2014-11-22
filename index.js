@@ -1,5 +1,10 @@
 'use strict';
 
+//obscure to avoid browserify
+function grequire(moduleName) {
+  return require(moduleName);
+}
+
 //get the promise implementation, if available
 module.exports = (function getPromise(w, g) {
   if (w && w.Promise) return w.Promise;
@@ -15,15 +20,15 @@ module.exports = (function getPromise(w, g) {
   }
   
   // use _global.require so browserify doesn't attempt to load these
-  try { return g.require('es6-promise').Promise; } catch(err) {}
-  try { return g.require('es6-promises'); } catch(err) {}
-  try { return g.require('bluebird'); } catch(err) {}
+  try { return grequire('es6-promise').Promise; } catch(err) {}
+  try { return grequire('es6-promises'); } catch(err) {}
+  try { return grequire('bluebird'); } catch(err) {}
   try { 
     //wrap Q
-    var q = g.require('q');
+    var q = grequire('q');
     if (q.Promise) return q.Promise; //latest
     if (q.promise) return q.promise; //older
   } catch(err) {}
   
   return null;
-}(this.window, typeof global !== undefined && global || null));
+}(this.window, typeof global !== undefined && global || this));

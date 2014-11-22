@@ -1,6 +1,6 @@
 {
   "name": "i-promise",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Returns an available ES6 Promise implementation, browserify friendly.",
   "main": "index.js",
   "dependencies": {},
