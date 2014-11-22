@@ -1,6 +1,6 @@
 {
   "name": "i-promise",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Returns an available ES6 Promise implementation, browserify friendly.",
   "main": "index.js",
   "dependencies": {},
@@ -23,11 +23,5 @@
   "bugs": {
     "url": "https://github.com/tracker1/i-promise/issues"
   },
-  "homepage": "https://github.com/tracker1/i-promise",
-  "optionalDependencies": {
-    "bluebird": "^2.0.0",
-    "es6-promise": "^2.0.0",
-    "es6-promises": "^1.0.0",
-    "q": "^1.0.0"
-  }
+  "homepage": "https://github.com/tracker1/i-promise"
 }
