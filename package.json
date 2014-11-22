@@ -1,0 +1,32 @@
+{
+  "name": "i-promise",
+  "version": "1.0.0",
+  "description": "Returns an available ES6 Promise implementation, browserify friendly.",
+  "main": "index.js",
+  "dependencies": {
+    "bluebird": "^2.3.11",
+    "es6-promise": "^2.0.0",
+    "es6-promises": "^1.0.8",
+    "q": "^1.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tracker1/i-promise.git"
+  },
+  "keywords": [
+    "es6",
+    "promise",
+    "async",
+    "flow-control"
+  ],
+  "author": "Michael J. Ryan <tracker1@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tracker1/i-promise/issues"
+  },
+  "homepage": "https://github.com/tracker1/i-promise"
+}
