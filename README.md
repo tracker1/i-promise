@@ -30,3 +30,12 @@ In node, attempts to use the following will be made.
 * [bluebird](https://www.npmjs.org/package/bluebird)
 * [q](https://www.npmjs.org/package/q) (`Promise` then `promise`)
 
+## Preferring user implementation over native
+
+Default behavior is to always favor native implementation if found. You can still favor the implementation of your choice without overriding global `Promise`:
+
+```js
+require('i-promise/config').use(MyPromiseImplementation);
+```
+
+You must run this code **before** any call to `require('i-promise')`.
